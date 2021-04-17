@@ -25,7 +25,23 @@ public class Dashboard extends AppCompatActivity {
                 break;
 
             case R.id.btnQ3:
-                //startActivity(new Intent(getApplicationContext(), Q2.class));
+                startActivity(new Intent(getApplicationContext(), Q3.class));
+                break;
+
+            case R.id.btnQ4:
+                startActivity(new Intent(getApplicationContext(), Q4.class));
+                break;
+
+            case R.id.btnQ5:
+                startActivity(new Intent(getApplicationContext(), Q5.class));
+                break;
+
+            case R.id.btnQ6:
+                startActivity(new Intent(getApplicationContext(), Q6.class));
+                break;
+
+            case R.id.btnQ7:
+                startActivity(new Intent(getApplicationContext(), Q7.class));
                 break;
 
             default:

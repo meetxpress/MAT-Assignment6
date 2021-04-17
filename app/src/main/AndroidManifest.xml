@@ -11,9 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAT_Assignment6">
-        <activity android:name=".Q2"
+        <activity
+            android:name=".Q7"
+            android:label="Question 7"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".Q6"
+            android:label="Question 6"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".Q5"
+            android:label="Question 5"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".Q4"
+            android:label="Question 4"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".Q3"
+            android:label="Question 3"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".Q2"
             android:label="Question 2"
-            android:parentActivityName=".Dashboard"/>
+            android:parentActivityName=".Dashboard" />
         <activity
             android:name=".MainActivity"
             android:label="Facebook API Login"
