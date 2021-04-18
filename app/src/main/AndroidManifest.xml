@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mat_assignment6">
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +13,11 @@
         <activity
             android:name=".Q7"
             android:label="Question 7"
-            android:parentActivityName=".Dashboard" />
+            android:theme="@style/Theme.MAT_Assignment6.NoActionBar" />
+        <activity
+            android:name=".Q6_2"
+            android:label="Question 6_2"
+            android:parentActivityName=".Q6" />
         <activity
             android:name=".Q6"
             android:label="Question 6"
