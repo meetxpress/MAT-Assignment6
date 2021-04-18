@@ -1,35 +1,34 @@
 package com.example.mat_assignment6;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.ViewGroup;
-import android.widget.Adapter;
+import android.view.View;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Q4 extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
-    // Using ArrayList to store images data
-    ArrayList FImg = new ArrayList<>(Arrays.asList(R.drawable.apple, R.drawable.kiwi, R.drawable.orange, R.drawable.sb));
-    ArrayList FName = new ArrayList<>(Arrays.asList("Apple", "Kiwi", "Orange", "Strawberry"));
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_q4);
+        recyclerView = findViewById(R.id.q4RecyclerView);
 
-        recyclerView = (RecyclerView) findViewById(R.id.q4RecyclerView);
+        ArrayList<Q4Model> list = new ArrayList<Q4Model>();
+        list.add(new Q4Model("Apple", R.drawable.apple));
+        list.add(new Q4Model("Kiwi", R.drawable.kiwi));
+        list.add(new Q4Model("Orange", R.drawable.orange));
+        list.add(new Q4Model("Strawberry", R.drawable.sb));
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        //Adapter adapter = new Adapter(getApplicationContext(), FImg, FName);
-        //recyclerView.setAdapter((RecyclerView.Adapter) adapter);
+        Q4ImageAdapter adapter = new Q4ImageAdapter(list, this);
+        recyclerView.setAdapter(adapter);
+
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(manager);
     }
 }
