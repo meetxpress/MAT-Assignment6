@@ -49,11 +49,6 @@ public class MainActivity extends AppCompatActivity {
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
 
-        /*if (!loggedOut) {
-            Picasso.with(this).load(Profile.getCurrentProfile().getProfilePictureUri(200, 200)).into(imageView);
-            //Log.d("TG", "Username is: " + Profile.getCurrentProfile().getName());
-        }*/
-
         loginButton.setReadPermissions(Arrays.asList("email", "public_profile"));
         callbackManager = CallbackManager.Factory.create();
 
@@ -75,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(FacebookException exception) {
-                Log.d("err", exception.toString());
             }
         });
     }

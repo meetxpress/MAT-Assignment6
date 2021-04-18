@@ -39,12 +39,10 @@ public class Q3 extends AppCompatActivity implements AdapterView.OnItemSelectedL
 
         ArrayAdapter<String> da = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, country);
         q3Spinner.setAdapter(da);
-
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        //Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
         switch (parent.getItemAtPosition(position).toString()) {
             case "Select Item":
                 Toast.makeText(parent.getContext(), "Selected Item", Toast.LENGTH_SHORT).show();
@@ -67,6 +65,5 @@ public class Q3 extends AppCompatActivity implements AdapterView.OnItemSelectedL
     }
 
     public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Auto-generated method stub
     }
 }

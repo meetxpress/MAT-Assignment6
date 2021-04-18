@@ -26,7 +26,7 @@ public class Q6 extends AppCompatActivity {
         q6btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder ab = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder ab = new AlertDialog.Builder(Q6.this);
                 ab.setCancelable(true)
                     .setTitle("Confirmation")
                     .setMessage("Are you sure?")
